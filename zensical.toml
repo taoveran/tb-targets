@@ -11,18 +11,18 @@
 # The site_name is shown in the page header and the browser window title
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_name
-site_name = "doctest"
+site_name = "TB targets repository"
 
 # The site_description is included in the HTML head and should contain a
 # meaningful description of the site content for use by search engines.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_description
-site_description = "doc site to learn how to use zensical"
+site_description = "collection of TB target information of interest for computational chemistry"
 
 # The site_author attribute. This is used in the HTML head element.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_author
-site_author = ""
+site_author = "Research group of Dr. Gregory Smith (University of St. Thomas - Houston)"
 
 # The site_url is the canonical URL for your site. When building online
 # documentation you should set this.
@@ -66,6 +66,11 @@ Copyright &copy; 2026 The authors
 #
 # Read more: https://zensical.org/docs/customization/#additional-javascript
 #extra_javascript = ["javascripts/extra.js"]
+
+extra_javascript = [
+    "javascripts/mathjax.js",
+    "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
+]
 
 # ----------------------------------------------------------------------------
 # Section for configuring theme options
@@ -347,3 +352,6 @@ combine_header_slug = true
 [project.markdown_extensions.pymdownx.tasklist]
 custom_checkbox = true
 [project.markdown_extensions.pymdownx.tilde]
+# User added
+[project.markdown_extensions.tables]
+[project.markdown_extensions.pymdownx.blocks.caption]

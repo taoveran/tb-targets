@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 /site/
 
 # wrangler files
@@ -6,3 +8,4 @@
 !.dev.vars.example
 .env*
 !.env.example
+>>>>>>> refs/remotes/origin/main
