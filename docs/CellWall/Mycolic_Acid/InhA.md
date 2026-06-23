@@ -1,6 +1,6 @@
 InhA is a NADH dependent enzyme found in the FAS-II (fatty acid synthesis II) pathway unique to bacteria, mycobacteria, and parasitic protozoans. InhA catalyzes one of the final steps in the fatty acid elongation pathway and is the target of one of the primary first line tuberculosis antibiotics, Isoniazid. The drugs ethionamide and prothionamide also target InhA.  It is one of the best validated targets for treating tuberculosis and the object of intense research effort.  In other bacteria, the homologous enzyme is called FabI.
 
-## Protein and natural substrate
+## Protein, co-factors, and natural substrate
 
 InhA catalyzes the hydrogenation of an unsaturated enoyl-ACP to a saturated acyl-ACP.  It is one of the final steps in the elongation pathway and the likely rate limiting.  NADH is the required co-factor and provides a source of binding interactions with the substrate and contributes to the reduction by donating a hydrogen upon tranformation to NAD^+^.
 
@@ -14,6 +14,9 @@ Isoniazid acts as a pro-drug, getting activated by enzyme KatG to an acyl radica
   ![Image title](Isoniazid-activation.png){ width="600" }
   <figcaption>Isoniazid activation</figcaption>
 </figure>
+
+InhA
+
 
 ## Available crystal structures
 
