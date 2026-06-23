@@ -35,7 +35,7 @@ You should now see "(md)" instead of "(base)" as part of your commandline.
 Let's try installing the majority of our packages (This might take a while to solve the environment):
 
 ```
-conda install -c conda-forge rdkit biopython openmm openmm-setup mdtraj parmed openbabel pymol-open-source spyder datamol ase nglview xtb xtb-python psi4 dftd3-python dftd4-python pdbfixer openff-toolkit py3dmol jupyterlab nglview ipywidgets ambertools
+conda install -c conda-forge rdkit biopython openmm openmm-setup mdtraj parmed openbabel pymol-open-source spyder datamol ase nglview xtb xtb-python psi4 dftd3-python dftd4-python pdbfixer openff-toolkit py3dmol jupyterlab nglview ipywidgets ambertools MDAnalysis
 ```
 
 There's also one package that is quite useful, but is not found in the conda package repositories, so we'll install it with pip.
