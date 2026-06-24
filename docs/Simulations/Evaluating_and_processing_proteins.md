@@ -86,22 +86,12 @@ Here's one more example, assign the histidine as HIE, HID, or HIP.
     The eta (left) nitrogen is close to Aspartate, which with a pKa of 3.7 favors the deprotonated state (negative charge), which makes a proton likely on this nitrogen to form a favorable hydrogen bond.  The delta (right) nitrogen is close to Lysine, which with a pKa of 10.5 favors the protonated and positively charged NH~3~^+^ state.  This makes this nitrogen most likely deprotonated, acting as a hydrogen bond acceptor site for the lysine hydrogens.
 	
 
-## 
-
-
-## Making a new environment for installing packages
-
-
-
-
-## Testing
-
-
-| Header  | Purpose                                       |
+<!-- | Header  | Purpose                                       |
 | ---------------- | --------------------------------------------- |
 |           |        |
 |       |     |
-|           |        |
+|           |        |-->
+
 
 
 
