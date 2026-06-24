@@ -9,20 +9,24 @@ On MacOS, there is a terminal app installed by default.  MacOS has a linux like 
 
 At the commandline, download the latest version of miniconda.
 
+```
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh | bash
 
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh | bash
+```
 
 Generally the defaults for the installation are fine, and choose yes at the end to update your .bashrc file so that the conda environment loads automatically when you open the terminal.  If it's setup correctly, you should see the text "(base)" at the start of your commandline.  This means conda is loaded and you are currently in the base environment.  Let's get any updates available.
 
+```
 conda update conda 
 conda update -–all
+```
 
 ## Making a new environment for installing packages
 
-Although conda is designed to help python packages work together well, the more packages you install, the greater chance of conflicts, so it's advisable to keep the base environment fairly pristine, and to create new environments before installing a new collection of packages.  This also allows you to set the python version per environment.  Packages get updated at different rates, so you will often have to go back several python versions to get to a version where all your packages can work together.
+Although conda is designed to help python packages work together well, the more packages you install, the greater chance of conflicts, so it's advisable to keep the base environment fairly pristine, and to create new environments before installing a new collection of packages.  This also allows you to set the python version per environment. Packages get updated at different rates, so you will often have to go back several python versions to get to a version where all your packages can work together.
 
-As of June, 2026, miniconda ships with python version 3.13, but you will likely need to go back a few version (3.12, 3.11, 3.10..) until you find a version that works with all your desired packages.
+As of June, 2026, miniconda ships with python version 3.13, but you will likely need to go back a few versions (3.12, 3.11, 3.10..) until you find a version that works with all your desired packages.
 
 Let's create an environment called "md" for our computational chemistry tools, and then switch to it.
 
@@ -47,11 +51,25 @@ pip install molify
 If all installs sucessfully, you should now be ready to run any of the scripts or notebooks found in these docs.  Generally when starting a new session, open the terminal, and activate the md enviornment (conda activate md).
 
 ## Testing
-Test a few tools, verify the following commands work:
+Test a few tools install through conda, verify the following commands work:
 
-spyder  ->  should open an editor
-jupyter lab -> should open a tab in your web browser for working with jupyter notebooks
-pymol -> should open a molecule viewer
+| Command/program  | Purpose                                       |
+| ---------------- | --------------------------------------------- |
+| Spyder           | code editor and development environment       |
+| jupyter lab      | jupyter notebooks (opens in a browser tab)    |
+| pymol            | molecule viewer/visualizer/light editor       |
+
+Some additional tools that can be useful to install or have bookmarked.
+
+Avogadro 2 - Builder/Optimizer for small to medium systems: https://avogadro.cc/install/index.html
+
+Chemistry Line Editor / Viewer - https://app.molview.com/
+
+Visual Molecular Dynamics (VMD) - https://www.ks.uiuc.edu/Research/vmd/
+
+Orca quantum package - https://orcaforum.kofo.mpg.de/index.php
+
+Amber Moleculer Dynamics - https://ambermd.org/
 
 
 

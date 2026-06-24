@@ -5,11 +5,10 @@ The Antigen 85 Complex (composed of protein isoforms Ag85A, Ag85B, and Ag85C) is
 Ag85 catalyzes two molecules of trehalose monomycolate to create trehalose dimycolate (TDM) and a free trehalose molecule, using the TDM to create the outer mycomembrane, which prevents phagolysosomal fusion within the host macrophage. Ag85 also catalyzes a molecule of trehalose monomycolate to a molecule of arabinogalactan to create mycolyl-arabinogalactan, and a molecule of free trehalose.
 
 <!-- Sub and superscripts examples - x^2 = x^2^,  H2O = H~2~O -->
+
 <!-- Image notes - include image in same directory as the markdown file -->
+
 <!-- Include image of chemical transformation of enoyl-ACP to acyl-ACP -->
-
-Isoniazid acts as a pro-drug, getting activated by enzyme KatG to an acyl radical before it irreversibly reacts with NADH.  The adduct is then a tight binding reversible inhibitor of InhA.
-
 
 ## Available crystal structures
 
@@ -17,32 +16,32 @@ There are many available crystal structures of the three Antigen 85 Isoforms.  A
 
 *Table 1 -* Antigen 85C
 
-| pdb | year | resolution | notes |
-| --- | --- | --- | --- |
-| 1DQZ | 2000 | 1.50 | Dimer  |
-| 4MQL | 2013 | 1.30 | Mutation at AA #211 |
-| 4QEK | 2014 | 1.30 | Mutation at AA #125 |
-| 4QE3 | 2014 | 1.35 | Mutation at AA #265 |
-| 4QDU | 2014 | 1.40 | Co-crystallized with Ebselen |
-| 4QDX | 2014 | 1.50 | Mutation at AA #210 |
-| 4QDT | 2014 | 1.50 | Co-crystallized with Iodoacetamide |
-| 4QDZ | 2014 | 1.89 | Mutation at AA #230 | 
-| 4QDO | 2014 | 1.90 | Co-crystallized with p-chloromercuribenzoic acid |
-| 1VA5 | 2004 | 2.02 | Co-crystallized with octylthioglucoside |
+| pdb  | year | resolution | notes                                       |
+| ---- | ---- | ---------- | ------------------------------------------- |
+| 1DQZ | 2000 | 1.50       | Dimer                                       |
+| 1DQY | 2000 | 1.83       | Co-crystal with diethyl phosphate           |
+| 4MQL | 2013 | 1.30       | Mutation at AA #211                         |
+| 4QEK | 2014 | 1.30       | Mutation at AA #125                         |
+| 4QE3 | 2014 | 1.35       | Mutation at AA #265                         |
+| 4QDU | 2014 | 1.40       | Co-crystal with Ebselen                     |
+| 4QDX | 2014 | 1.50       | Mutation at AA #210                         |
+| 4QDT | 2014 | 1.50       | Co-crystal with Iodoacetamide               |
+| 4QDZ | 2014 | 1.89       | Mutation at AA #230                         |
+| 4QDO | 2014 | 1.90       | Co-crystal with p-chloromercuribenzoic acid |
+| 1VA5 | 2004 | 2.02       | Co-crystal with octylthioglucoside          |
 
 *Table 2 -* Antigen 85B
 
-| pdb | year | resolution | notes |
-| --- | --- | --- | --- | 
-| 1F0N  | 2000  | 1.80 | Apo | 
-| 1FOP | 2000  | 1.90 |  Co-crystallized with Trehalose (natural substrate) |
+| pdb  | year | resolution | notes                                         |
+| ---- | ---- | ---------- | --------------------------------------------- |
+| 1F0N | 2000 | 1.80       | Apo                                           |
+| 1F0P | 2000 | 1.90       | Co-crystal with Trehalose (natural substrate) |
 
 *Table 3* - Antigen 85A
 
-| pdb | year | resolution | notes | 
-| --- | --- | --- | --- |
-| 1SFR | 2004 | 2.70 | Apo |
-
+| pdb  | year | resolution | notes |
+| ---- | ---- | ---------- | ----- |
+| 1SFR | 2004 | 2.70       | Apo   |
 
 ## Inhibitors
 
@@ -50,8 +49,7 @@ No approved inhibitor, but many inhibitors being studied pre-clinically and have
 
 Most potential inhibitors target the Cysteine 209 or Serine 124, which have proved to mitigate the enzyme and prevent enzymatic metabolism.
 
-## Equilibrated Computational Structures 
-
+## Equilibrated Computational Structures
 
 ## Citations
 
