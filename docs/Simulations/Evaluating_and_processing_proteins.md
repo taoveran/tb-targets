@@ -57,10 +57,9 @@ The x-ray doesn't have hydrogens, but can you make a guess at the protonation st
 Histidine can be singly protonated (hydrogen on the eta nitrogen (HIE) or hydrogen on the delta nitrogen (HID)), or it can be doubly protonated (both eta and delta) with a net positive charge (HIP).  
 
 <figure markdown="span">
-  ![Image title](protein-color-chain.png){ width="600" }
-  <figcaption>Hemoglobin from 2hbs</figcaption>
+  ![Image title](his-heme-dist.png){ width="600" }
+  <figcaption> Closest histidine to the heme iron </figcaption>
 </figure>
-
 
 
 Think about the nature of charges.  What is the charge on the iron?  Is it likely another positive charge would closely interact with the iron? Probably not, so doubly protonated is off the table for this histidine.  
