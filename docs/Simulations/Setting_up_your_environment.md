@@ -11,7 +11,8 @@ At the commandline, download the latest version of miniconda.
 
 ```
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh | bash
-
+```
+```
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh | bash
 ```
 
@@ -51,7 +52,7 @@ pip install molify
 If all installs sucessfully, you should now be ready to run any of the scripts or notebooks found in these docs.  Generally when starting a new session, open the terminal, and activate the md enviornment (conda activate md).
 
 ## Testing
-Test a few tools install through conda, verify the following commands work:
+Test a few tools installed through conda, and verify the following commands work:
 
 | Command/program  | Purpose                                       |
 | ---------------- | --------------------------------------------- |
@@ -63,7 +64,7 @@ Some additional tools that can be useful to install or have bookmarked.
 
 Avogadro 2 - Builder/Optimizer for small to medium systems: https://avogadro.cc/install/index.html
 
-Chemistry Line Editor / Viewer - https://app.molview.com/
+Chemistry Line Structure Editor / Viewer - https://app.molview.com/
 
 Visual Molecular Dynamics (VMD) - https://www.ks.uiuc.edu/Research/vmd/
 
