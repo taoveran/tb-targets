@@ -47,9 +47,9 @@ The protein and ligand need to be dealt with separately, so we'll first split th
 
 ## Using PDBFixer to fix most protein issues
 
-Downloaded X-ray structures are very rarely complete.  They often have missing residues, missing heavy atoms, and almost always they are missing hydrogens.  However for a simulation, we generally want a continuous protein chain with no heavy atoms missing.
+Downloaded X-ray structures are very rarely complete.  They often have missing residues, missing heavy atoms, and almost always they are missing hydrogens.  However for a simulation, we generally want a continuous protein chain with no missing atoms.
 
-PDBFixer can solve most of these issues, including patching missing residues, however this should be used with care.  Gaps of just a few residues can generally be restored and with minimization, heating, and dynamics, will be able to find a reasonable conformation in short order.  Large gaps, especially interchain gaps, of 5+ residues, may be placed by PBDFixer in particularly bad orientations and require careful restrained minimization and dynamics to equilibrate.  This particular protein structure is mostly complete with just one missing terminal residue, so there should be no issues with restoring the residue, adjust the N-terminus and C-terminus backbone atoms, and adding Hydrogens.
+PDBFixer can solve most of these issues, including patching missing residues, however this should be used with care.  Gaps of just a few residues can generally be restored and with minimization, heating, and dynamics, are be able to find a reasonable conformation in short order.  Large gaps, especially interchain gaps, of 5+ residues, may be placed by PBDFixer in particularly bad orientations and require careful restrained minimization and dynamics to equilibrate.  This particular protein structure is mostly complete with just one missing terminal residue, so there should be no issues with restoring the residue, adjusting the N-terminus and C-terminus backbone atoms, and adding Hydrogens.
 
 If your protein has many titratable groups (HIS, ASP, GLU, LYS, etc..) that can be in multiple protonation states, especially if these groups are involved in binding or catalysis, you should consider the protonation carefully.  Histidine in particular can easily exist in its neutral state (HIE or HID) or its positively charged state (HIP).  Inspection of the structure and the local environment of each histidine may be needed to assign these well. 
 
@@ -57,7 +57,24 @@ As a final check, load the original pdb and the fixed protein pdb file in pymol 
 
 ## Ligand considerations
 
-There are multiple ways to deal with ligands or co-factors in an x-ray structure.  If it is a relatively small organic molecule, there are paramterization tools available in OpenMM and AMBER.  OpenMM can parameterize a small ligand using the GAFF2 forcefield (part of the ambertools package) or their own implementation called SMIRNOFF.  If the ligand is very common (ATP/ADP, NAD+/NADH, HEME groups, etc..), there may already be published forcefield parameters that have been refined beyond the capability of the automated workflows of GAFF2 and SMIRNOFF.  For example, see [Amber parameter database](http://amber.manchester.ac.uk/). For a large important co-factor like NAD+, you should be skeptical of just using the automated GAFF2 or SMIRNOFF, and search for already refined parameters. That said, we can do some ligand processing to generate a canonical structure.  
+There are multiple ways to deal with ligands or co-factors in an x-ray structure.  If it is a relatively small organic molecule, there are paramterization tools available in OpenMM. OpenMM can parameterize a small ligand using the GAFF2 forcefield (part of the ambertools package) or a more native implementation called SMIRNOFF.  If the ligand is very common (ATP/ADP, NAD+/NADH, HEME groups, etc..), there may already be published forcefield parameters that have been refined beyond the capability of the automated workflows of GAFF2 and SMIRNOFF.  For example, see [Amber parameter database](http://amber.manchester.ac.uk/). 
+
+For other non-protein components in a struture, see [AMBERMD-forcefield](https://ambermd.org/AmberModels.php).  More specifically:
+
+| Molecule Class | Forcefield | Link |
+| -------------- | ---------- | ---- |
+| Carbohydrates | GLYCAM_06j | [Glycam Web](https://glycam.org/) |
+| Nucleic Acids | OL24 (DNA) / OL3 (RNA) | [AMBERMD-NuclericAcids](https://ambermd.org/AmberModels_nucleic.php)|
+| Lipids | LIPID21 | (AMBERMD-Lipids)https://ambermd.org/AmberModels_lipids.php |
+
+You can find more information on the amber website, check it carefully for your system.
+
+For something like NAD+, you would have the options:
+- Search for already existing parameters
+- GAFF2 parameterization
+- SMIRNOFF parameterization
+
+Always see if parameters already exist first, in this case, there are several sets of parameters published already that can be used.  Getting the ligand structure file prepared in an unambiguous and canonical format
 
 There is an optional example block for splitting out ligands and saving a structure file and chemical descriptors in the cleanup script.  Its recommended to skip this step for the first pass, as it adds considerable complexity to the setup.  
 
@@ -76,7 +93,7 @@ Run the `protein_solvation.ipynb` notebook to see the results of solvating your 
 
 Open `protein_minimization.ipynb` in jupyter lab to run your first simulation task - minimization.  The addition of hydrogens, missing residues, waters, and ions to your system, all will raise the potential energy significantly.  A short minimization will allow all the added elements to relax and adapt a more favorable conformation.
 
-However, because the initial energy is usually quite high, we want to put some breaks in place so our protein doesn't unfold or undergo severe conformational changes.  The usual procedure is to restrain the protein backbone, essentially holding it in place, and allow all the other aspects of the system to relax around this fixed backbone.  For large complex systems, we generally keep the restraints in place for minimization, heating, and equilibration, and then slowly release the restraints during equilibration.  
+However, because the initial energy is usually quite high, we want to put some brakes in place so our protein doesn't unfold or undergo severe conformational changes.  The usual procedure is to restrain the protein backbone, essentially holding it in place, and allow all the other aspects of the system to relax around this fixed backbone.  For large complex systems, we generally keep the restraints in place for minimization, heating, and equilibration, and then slowly release the restraints during equilibration.  
 
 Check the initial reported potential energy and the minimized potential energy for your system.  It should have dropped considerably.
 
